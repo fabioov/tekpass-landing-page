@@ -1,2 +1,2 @@
-# tekpass.github.io
+# tekpass-landing-page
 TekPass Landing Page
