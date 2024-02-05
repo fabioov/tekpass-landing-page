@@ -27,4 +27,10 @@ class ErrorBoundary extends Component {
   }
 }
 
+function logErrorToMyService(error, errorInfo) {
+  // Implement the function to log errors to an external service
+  console.error('Logging to external service:', error, errorInfo);
+}
+
+
 export default ErrorBoundary;
