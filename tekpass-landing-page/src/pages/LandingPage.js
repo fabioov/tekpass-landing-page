@@ -225,6 +225,8 @@ const Section = ({ id, children, isNarrow }) => (
 const LandingPage = () => {
   const notify = useToast();
   const [isDesktop, setIsDesktop] = useState(false);
+  const [selectedPlatform, setSelectedPlatform] = useState('');
+
 
   useEffect(() => {
     const userAgent = navigator.userAgent.toLowerCase();
@@ -279,7 +281,10 @@ const LandingPage = () => {
                   colorScheme="teal"
                   size="lg"
                   as="a"
-                  onClick={handleOpenModal}
+                  onClick={() => {
+                    setSelectedPlatform('macOS');
+                    handleOpenModal();
+                  }}
                 >
                   Download for macOS
                 </Button>
@@ -289,7 +294,8 @@ const LandingPage = () => {
                   colorScheme="teal"
                   size="lg"
                   onClick={() => {
-                    /* Handle download for Windows */
+                    setSelectedPlatform('Windows');
+                    handleOpenModal();
                   }}
                 >
                   Download for Windows
@@ -418,6 +424,7 @@ const LandingPage = () => {
       <DownloadCodeModal
         isOpen={isDownloadCodeModalOpen}
         onClose={onDownloadCodeModalClose}
+        platform={selectedPlatform}
       />
     </>
   );
