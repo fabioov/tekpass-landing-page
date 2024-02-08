@@ -208,19 +208,26 @@ const Navbar = () => {
   );
 };
 
-// Section component for reusability
 const Section = ({ id, children, isNarrow }) => (
-  <Box
+  <Flex
     as="section"
     id={id}
     py="20"
     px="4"
-    width={isNarrow ? "60%" : "auto"} // Use "auto" for full width or "60%" for narrower sections
-    mx="auto" // This centers the section
+    minH="100vh" // Ensure section takes up at least the full height of the viewport
+    width="auto" // Adapt width to the content or container specifications
+    justify="center" // Horizontally center content
+    align="center" // Vertically center content
+    direction="column" // Stack children vertically
+    mx="auto" // Center section in the available horizontal space
   >
-    {children}
-  </Box>
+    <Box width={isNarrow ? "60%" : "auto"} mx="auto">
+      {children}
+    </Box>
+  </Flex>
 );
+
+
 
 const LandingPage = () => {
   const notify = useToast();
