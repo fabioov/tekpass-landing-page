@@ -124,19 +124,37 @@ const Navbar = () => {
             <Flex gap="4">
               <Link
                 href="#home"
-                _hover={{ bg: linkHoverBg, color: linkHoverColor }}
+                _hover={{
+                  bg: linkHoverBg,
+                  color: linkHoverColor,
+                  textDecoration: "none", // Remove underline on hover if it's there by default
+                  transform: "scale(1.05)", // Slightly scale up the link
+                  transition: "transform 0.2s, background-color 0.2s", // Smooth transition for transform and background-color
+                }}
               >
                 Home
               </Link>
               <Link
                 href="#features"
-                _hover={{ bg: linkHoverBg, color: linkHoverColor }}
+                _hover={{
+                  bg: linkHoverBg,
+                  color: linkHoverColor,
+                  textDecoration: "none", // Remove underline on hover if it's there by default
+                  transform: "scale(1.05)", // Slightly scale up the link
+                  transition: "transform 0.2s, background-color 0.2s", // Smooth transition for transform and background-color
+                }}
               >
                 Features
               </Link>
               <Link
                 href="#contact"
-                _hover={{ bg: linkHoverBg, color: linkHoverColor }}
+                _hover={{
+                  bg: linkHoverBg,
+                  color: linkHoverColor,
+                  textDecoration: "none", // Remove underline on hover if it's there by default
+                  transform: "scale(1.05)", // Slightly scale up the link
+                  transition: "transform 0.2s, background-color 0.2s", // Smooth transition for transform and background-color
+                }}
               >
                 Contact Us
               </Link>
@@ -172,13 +190,46 @@ const Navbar = () => {
           <DrawerBody>
             <VStack spacing={4} align="stretch" height="full">
               {/* Links centered */}
-              <Link href="#home" onClick={onClose} textAlign="center">
+              <Link
+                href="#home"
+                onClick={onClose}
+                textAlign="center"
+                _hover={{
+                  bg: linkHoverBg,
+                  color: linkHoverColor,
+                  textDecoration: "underline", // Add underline on hover
+                  transform: "translateY(-2px)", // Slightly move up the link
+                  transition: "all 0.2s ease-in-out", // Smooth transition for all properties
+                }}
+              >
                 Home
               </Link>
-              <Link href="#features" onClick={onClose} textAlign="center">
+              <Link
+                href="#features"
+                onClick={onClose}
+                textAlign="center"
+                _hover={{
+                  bg: linkHoverBg,
+                  color: linkHoverColor,
+                  textDecoration: "underline", // Add underline on hover
+                  transform: "translateY(-2px)", // Slightly move up the link
+                  transition: "all 0.2s ease-in-out", // Smooth transition for all properties
+                }}
+              >
                 Features
               </Link>
-              <Link href="#contact" onClick={onClose} textAlign="center">
+              <Link
+                href="#contact"
+                onClick={onClose}
+                textAlign="center"
+                _hover={{
+                  bg: linkHoverBg,
+                  color: linkHoverColor,
+                  textDecoration: "underline", // Add underline on hover
+                  transform: "translateY(-2px)", // Slightly move up the link
+                  transition: "all 0.2s ease-in-out", // Smooth transition for all properties
+                }}
+              >
                 Contact Us
               </Link>
 
@@ -227,13 +278,10 @@ const Section = ({ id, children, isNarrow }) => (
   </Flex>
 );
 
-
-
 const LandingPage = () => {
   const notify = useToast();
   const [isDesktop, setIsDesktop] = useState(false);
-  const [selectedPlatform, setSelectedPlatform] = useState('');
-
+  const [selectedPlatform, setSelectedPlatform] = useState("");
 
   useEffect(() => {
     const userAgent = navigator.userAgent.toLowerCase();
@@ -257,7 +305,8 @@ const LandingPage = () => {
       // Notify mobile users that downloading is restricted
       notify({
         title: "Download Unavailable",
-        description: "The download feature is available on desktop devices only.",
+        description:
+          "The download feature is available on desktop devices only.",
         status: "warning",
         duration: 5000,
         isClosable: true,
@@ -289,7 +338,7 @@ const LandingPage = () => {
                   size="lg"
                   as="a"
                   onClick={() => {
-                    setSelectedPlatform('macOS');
+                    setSelectedPlatform("macOS");
                     handleOpenModal();
                   }}
                 >
@@ -301,7 +350,7 @@ const LandingPage = () => {
                   colorScheme="teal"
                   size="lg"
                   onClick={() => {
-                    setSelectedPlatform('Windows');
+                    setSelectedPlatform("Windows");
                     handleOpenModal();
                   }}
                 >
