@@ -3,7 +3,7 @@ const axios = require('axios');
 
 exports.handler = async (event, context) => {
   try {
-    const response = await axios.get('https://api.github.com/repos/owner/repo/releases/latest', {
+    const response = await axios.get('https://api.github.com/repos/fabioov/TekPass-Releases/releases/latest', {
       headers: {
         'Authorization': `token ${process.env.REACT_APP_GITHUB_TOKEN}`,
         'Accept': 'application/vnd.github.v3+json',
