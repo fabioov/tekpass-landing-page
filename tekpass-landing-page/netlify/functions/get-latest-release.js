@@ -1,4 +1,9 @@
-const fetch = require("node-fetch");
+// const fetch = require("node-fetch");
+
+let fetch;
+import('node-fetch').then(module => {
+  fetch = module.default;
+});
 
 exports.handler = async (event, context) => {
   const API_SECRET = process.env.REACT_APP_GITHUB_TOKEN; // Use environment variable for security
