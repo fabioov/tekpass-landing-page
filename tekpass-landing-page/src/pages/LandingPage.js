@@ -186,7 +186,7 @@ const Navbar = () => {
         <DrawerOverlay />
         <DrawerContent>
           <DrawerCloseButton />
-          <DrawerHeader>TekPass</DrawerHeader>
+          <DrawerHeader>RedPass</DrawerHeader>
           <DrawerBody>
             <VStack spacing={4} align="stretch" height="full">
               {/* Links centered */}
@@ -325,7 +325,7 @@ const LandingPage = () => {
           <Navbar />
           <Section id="home">
             <VStack spacing="4" textAlign="center">
-              <Heading>Welcome to TekPass</Heading>
+              <Heading>Welcome to RedPass</Heading>
               <Text>Download the app for your platform</Text>
               <Flex
                 direction={{ base: "column", md: "row" }} // Stacks vertically on small screens, horizontally on medium and larger screens
@@ -392,7 +392,7 @@ const LandingPage = () => {
                     </Box>
                     <Heading size="md">Encrypted Data Storage</Heading>
                     <Text>
-                      TekPass ensures your SAP connection credentials are stored
+                      RedPass ensures your SAP connection credentials are stored
                       securely with end-to-end encryption, protecting your
                       sensitive information from unauthorized access.
                     </Text>
@@ -412,7 +412,7 @@ const LandingPage = () => {
                     </Box>
                     <Heading size="md">Multilingual Support</Heading>
                     <Text>
-                      Catering to a global audience, TekPass offers an intuitive
+                      Catering to a global audience, RedPass offers an intuitive
                       user interface in Portuguese, English, Spanish, Chinese,
                       Hindi, and German, making it accessible to users
                       worldwide.
@@ -433,7 +433,7 @@ const LandingPage = () => {
                     </Box>
                     <Heading size="md">Secure Signup and Sign In</Heading>
                     <Text>
-                      With advanced security measures, TekPass provides a safe
+                      With advanced security measures, RedPass provides a safe
                       and reliable way for users to sign up and sign in,
                       ensuring your credentials are always protected.
                     </Text>
@@ -473,7 +473,7 @@ const LandingPage = () => {
             </VStack>
           </Section>
           <Box as="footer" textAlign="center" py="5">
-            © {new Date().getFullYear()} TekPass. All rights reserved.
+            © {new Date().getFullYear()} RedPass. All rights reserved.
           </Box>
         </Container>
       </Box>

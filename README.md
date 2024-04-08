@@ -1,2 +1,2 @@
-# tekpass-landing-page
-TekPass Landing Page
+# redpass-landing-page
+RedPass Landing Page
