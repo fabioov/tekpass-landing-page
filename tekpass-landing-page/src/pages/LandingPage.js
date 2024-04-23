@@ -332,7 +332,7 @@ const LandingPage = () => {
                 gap="4"
                 alignItems="center" // Centers the buttons when stacked vertically
               >
-                <Button
+                {/* <Button
                   leftIcon={<FontAwesomeIcon icon={faApple} />}
                   colorScheme="teal"
                   size="lg"
@@ -343,7 +343,7 @@ const LandingPage = () => {
                   }}
                 >
                   Download for macOS
-                </Button>
+                </Button> */}
 
                 <Button
                   leftIcon={<FaWindows />}
